@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FormsExample.LoginPage" BackgroundImage="sea.png">
+	<ContentPage.Content>
+        <RelativeLayout>
+
+                <Label x:Name="titleLbl" Text = "Dory" FontSize="40" TextColor="White"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.15}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-40}" />
+
+            <Frame Margin="30" BackgroundColor="White"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=titleLbl, Property=Y, Factor=1.5, Constant=20}" 
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}" 
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" >
+
+                <StackLayout>
+                    <Entry Placeholder="Email" VerticalOptions="Center" Keyboard="Email" BackgroundColor="Gray" />
+                    <Entry Placeholder="Senha" VerticalOptions="Center" Keyboard="Email" BackgroundColor="Gray" />
+                    <Button Text = "Entrar" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Fill" />
+                    <Image Source="botao_facebook.png" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="45"/>
+                </StackLayout>
+
+            </Frame>
+            
+        </RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>
